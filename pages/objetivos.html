@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,188 @@
     <link rel="stylesheet" href="CSS/Style.css">
     <title>Objetivos</title>
 </head>
+
 <body>
     <nav class="bg-white border-gray-150 dark:bg-gray-900">
-        <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+        <div class="flex flex-wrap items-center justify-center max-w-screen-xl mx-auto p-4 space-x-8">
             <a class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="Imagenes/buildings.svg" class="h-8" alt="NovaSetup Logo" />
-                <span class="center text-2xl font-semibold whitespace-nowrap dark:text-white">NovaSetup</span>
+                <span class="text-2xl font-semibold whitespace-nowrap dark:text-white">DOM</span>
             </a>
-            <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
-            </div>
-            <div id="mega-menu" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+
+            <div id="mega-menu" class="flex items-center w-auto">
                 <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                     <li>
-                    <li>
-                        <a href="http://127.0.0.1:5500/Index.html"
-                            class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                        <a href="http://127.0.0.1:5500/Index.html" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 
+                    md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 
+                    dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 
+                    dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                             aria-current="page">DOM</a>
                     </li>
                     <li>
-                        <a href="http://127.0.0.1:5500/Pages/Caracteristicas.html"
-                            class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Características</a>
+                        <a href="http://127.0.0.1:5500/Pages/Caracteristicas.html" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 
+                    md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 
+                    dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 
+                    dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                            Características
+                        </a>
                     </li>
                     <li>
-                        <a href="http://127.0.0.1:5500/Pages/Objetivos.html"
-                            class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Objetivos</a>
+                        <a href="http://127.0.0.1:5500/Pages/Objetivos.html" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 
+                    md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 
+                    dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 
+                    dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                            Objetivos
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <br>
+    <h1 style="text-align: center; font-size: 3rem; font-weight: bold;">CARACTERISTICAS DOM</h1>
+    <br>
+    <hr>
+    <br>
+    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Representar la estructura del documento como un
+        árbol de objetos</h2>
+    <div class="Tarjeta">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="Imagenes/1obj.webp" alt="logo" width="600" height="800">
+        </div>
+        <br>
+        <p>El primer gran objetivo del DOM es modelizar cualquier documento HTML o XML como un árbol de nodos. Este
+            árbol parte de un nodo raíz (Document) y desciende en ramas que corresponden a etiquetas, atributos, texto y
+            comentarios. Al representar el documento de esta forma, se crea una vista interna que cualquier script puede
+            entender y recorrer de manera uniforme.
 
+            Esta representación en árbol es esencial para que el navegador sepa cómo interpretar y renderizar el
+            contenido. Cada nodo incluye referencias a su padre, hijos y hermanos, lo cual facilita operaciones
+            complejas como desplazar subárboles completos o iterar sobre todos los elementos de cierto tipo.
+
+            Además, este modelo de árbol simplifica enormemente la lógica de búsqueda y recorrido. Funciones como
+            querySelectorAll() o getElementsByTagName() exploran este árbol con algoritmos optimizados que permiten
+            localizar rápidamente los nodos deseados sin necesidad de procesar texto plano.
+
+            Por otro lado, entender el documento como un árbol de objetos ayuda a desacoplar la estructura (etiquetas y
+            jerarquía) de la presentación (estilos CSS) y del comportamiento (scripts JavaScript). Cada capa queda bien
+            definida, respetando el principio de separación de responsabilidades.
+
+            Finalmente, gracias a este objetivo, tanto los navegadores como las herramientas de desarrollo (DevTools,
+            validadores, linters) pueden visualizar y depurar el documento de forma clara: colapsar ramas, inspeccionar
+            atributos y monitorizar cambios en tiempo real.</p>
+    </div>
+    <br>
+    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Facilitar la manipulación dinámica del contenido
+    </h2>
+    <div class="Tarjeta">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="Imagenes/2obj.webp" alt="logo" width="600" height="800">
+        </div>
+        <br>
+        <p>Uno de los fines más potentes del DOM es permitir que los desarrolladores modifiquen la página en ejecución,
+            sin necesidad de recargar el navegador. Gracias al DOM, se pueden añadir, editar o eliminar nodos en
+            caliente con métodos como appendChild(), removeChild() o innerHTML.
+
+            Este objetivo impulsa la creación de interacciones ricas: formularios que validan al teclear, galerías de
+            imágenes que cargan en segundo plano, menús que aparecen al pasar el ratón y vistas que se actualizan con
+            datos en tiempo real. Todo ello sin interrupciones perceptibles para el usuario.
+
+            Más aún, la manipulación dinámica posibilita la construcción de Single Page Applications (SPA), donde la
+            aplicación se comporta como un todo coherente y fluido, cambiando secciones de la interfaz sin volver a
+            cargar el HTML completo. El DOM actúa como la base viva sobre la que se monta cada vista.
+
+            Asimismo, el DOM otorga la capacidad de clonar plantillas de elementos (cloneNode()) y de insertar
+            fragmentos (DocumentFragment), optimizando el rendimiento al reducir los reflows y repaints innecesarios.
+            Estas técnicas avanzadas minimizan el impacto visual y mejoran la experiencia del usuario.
+
+            En definitiva, este objetivo de manipulación dinámica convierte páginas estáticas en entornos interactivos y
+            personalizables, fundamentales para el desarrollo web moderno.</p>
+    </div>
+    <br>
+    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Establecer una interfaz uniforme y estandarizada
+    </h2>
+    <div class="Tarjeta">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="Imagenes/3obj.webp" alt="logo" width="600" height="800">
+        </div>
+        <br>
+        <p>Otro objetivo clave es ofrecer una API coherente y unificada que todos los navegadores implementen de acuerdo
+            al estándar W3C/WHATWG. Así, funciones como getElementById() o addEventListener() se comportan de igual
+            forma en Chrome, Firefox, Safari, Edge y otros.
+
+            La unificación evita que los desarrolladores tengan que escribir códigos condicionales o usar detección de
+            navegador para lograr compatibilidad. En lugar de ello, basta con seguir la especificación oficial para
+            garantizar que el mismo script funcione en distintos entornos.
+
+            Además, esta interfaz estandarizada incluye no solo la manipulación de nodos, sino también el manejo de
+            eventos, el trabajo con estilos, la navegación del historial, el almacenamiento local (localStorage,
+            sessionStorage) y otras APIs hermanas que interactúan con el documento.
+
+            El objetivo es que la curva de aprendizaje sea suave: una vez que conoces la API del DOM en un proyecto, la
+            misma base se aplica a cualquier otro, sin sorpresas ni comportamientos “exóticos” según el navegador.
+
+            Por último, mantener esta interfaz bajo el paraguas de un estándar oficial facilita la evolución controlada
+            del DOM: pueden incorporarse nuevas funcionalidades (p. ej. MutationObserver, Custom Elements) sin romper la
+            compatibilidad con el código existente.</p>
+    </div>
+    <br>
+    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Gestionar los eventos del usuario de manera
+        fiable</h2>
+    <div class="Tarjeta">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="Imagenes/4obj.webp" alt="logo" width="600" height="800">
+        </div>
+        <br>
+        <p>El DOM se diseñó para capturar, propagar y gestionar las interacciones del usuario (clics, teclado, scroll,
+            envío de formularios, etc.) a través de un sistema de eventos sólido y flexible. Cada nodo puede suscribirse
+            a uno o varios tipos de eventos para ejecutar lógica personalizada.
+
+            Este objetivo incluye ofrecer un modelo de burbujeo y captura que determina el orden en que los eventos
+            recorren el árbol, desde la raíz hasta el elemento objetivo y de vuelta. Con métodos como stopPropagation()
+            o preventDefault(), los desarrolladores controlan el flujo de interacción y anulan comportamientos nativos
+            cuando es necesario.
+
+            El manejo fiable de eventos permite construir componentes accesibles: menús que responden a teclas de
+            dirección, formularios que validan con input, diálogos que se cierran al pulsar escape, o zonas de arrastrar
+            y soltar (drag and drop) con eventos dedicados.
+
+            También es objetivo del DOM ofrecer opciones de suscripción avanzadas, como once: true para eventos que sólo
+            deben dispararse una vez, o passive: true para eventos de scroll que optimizan el rendimiento en
+            dispositivos móviles.
+
+            En conjunto, esta gestión de eventos como objetivo dota a la plataforma web de la capacidad de crear
+            interfaces tan intuitivas y reactivas como las de las aplicaciones nativas de escritorio o móviles.</p>
+    </div>
+    <br>
+    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Mejorar la interoperabilidad y compatibilidad
+        entre plataformas</h2>
+    <div class="Tarjeta">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="Imagenes/5obj.webp" alt="logo" width="600" height="800">
+        </div>
+        <br>
+        <p>Finalmente, el DOM persigue que cualquier documento estructurado (HTML, XML, SVG, MathML) funcione de manera
+            homogénea en distintos dispositivos (PC, móviles, tablets) y sistemas operativos. Para ello define
+            comportamientos claros ante cada operación, minimizando las discrepancias.
+
+            Este objetivo se traduce en un menor coste de desarrollo y mantenimiento: el mismo código que manipula un
+            SVG en escritorio, o que procesa un XML en un servicio, puede ejecutarse en un navegador móvil sin ajustes
+            especiales.
+
+            Además, gracias a la interoperabilidad, herramientas de testing (como Selenium, Cypress o JSDOM) replican el
+            DOM de manera confiable fuera de los navegadores, permitiendo automatizar pruebas y validar comportamientos
+            antes de desplegar en producción.
+
+            La compatibilidad también alcanza a tecnologías emergentes: Web Components, Shadow DOM, APIs de realidad
+            aumentada o WebGL usan la base del DOM para integrarse sin conflicto con el contenido tradicional, ampliando
+            las posibilidades sin fragmentar el estándar.
+
+            En suma, al favorecer la interoperabilidad y compatibilidad, el DOM asegura que la web siga siendo
+            universal: accesible, consistente y extensible en todo momento, tanto para usuarios como para
+            desarrolladores.</p>
+    </div>
+    <br>
 
     <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
@@ -62,4 +215,5 @@
         </div>
     </footer>
 </body>
+
 </html>
