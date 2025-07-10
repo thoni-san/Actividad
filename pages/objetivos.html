@@ -48,149 +48,183 @@
         </div>
     </nav>
     <br>
-    <h1 style="text-align: center; font-size: 3rem; font-weight: bold;">CARACTERISTICAS DOM</h1>
+    <h1 style="text-align: center; font-size: 3rem; font-weight: bold;">Objetivos y utilidad dentro del desarrollo web
+    </h1>
     <br>
     <hr>
     <br>
-    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Representar la estructura del documento como un
-        árbol de objetos</h2>
-    <div class="Tarjeta">
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="Imagenes/1obj.webp" alt="logo" width="600" height="800">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem;">
+
+        <!-- Tarjeta 1 -->
+        <div
+            style="width: 45%; border: 2px solid #ccc; border-radius: 10px; padding: 1rem; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Representar la estructura del documento
+                como un
+                árbol de objetos</h2>
+            <img src="Imagenes/1obj.webp" alt="Objetivo 1" style="width: 100%; height: auto; border-radius: 6px;">
+            <p style="text-align: justify; margin-top: 1rem;">El primer gran objetivo del DOM es modelizar cualquier
+                documento HTML o XML como un árbol de nodos. Este
+                árbol parte de un nodo raíz (Document) y desciende en ramas que corresponden a etiquetas, atributos,
+                texto y
+                comentarios. Al representar el documento de esta forma, se crea una vista interna que cualquier script
+                puede
+                entender y recorrer de manera uniforme.
+
+                Esta representación en árbol es esencial para que el navegador sepa cómo interpretar y renderizar el
+                contenido. Cada nodo incluye referencias a su padre, hijos y hermanos, lo cual facilita operaciones
+                complejas como desplazar subárboles completos o iterar sobre todos los elementos de cierto tipo.
+
+                Además, este modelo de árbol simplifica enormemente la lógica de búsqueda y recorrido. Funciones como
+                querySelectorAll() o getElementsByTagName() exploran este árbol con algoritmos optimizados que permiten
+                localizar rápidamente los nodos deseados sin necesidad de procesar texto plano.
+
+                Por otro lado, entender el documento como un árbol de objetos ayuda a desacoplar la estructura
+                (etiquetas y
+                jerarquía) de la presentación (estilos CSS) y del comportamiento (scripts JavaScript). Cada capa queda
+                bien
+                definida, respetando el principio de separación de responsabilidades.
+
+                Finalmente, gracias a este objetivo, tanto los navegadores como las herramientas de desarrollo
+                (DevTools,
+                validadores, linters) pueden visualizar y depurar el documento de forma clara: colapsar ramas,
+                inspeccionar
+                atributos y monitorizar cambios en tiempo real.</p>
         </div>
-        <br>
-        <p>El primer gran objetivo del DOM es modelizar cualquier documento HTML o XML como un árbol de nodos. Este
-            árbol parte de un nodo raíz (Document) y desciende en ramas que corresponden a etiquetas, atributos, texto y
-            comentarios. Al representar el documento de esta forma, se crea una vista interna que cualquier script puede
-            entender y recorrer de manera uniforme.
 
-            Esta representación en árbol es esencial para que el navegador sepa cómo interpretar y renderizar el
-            contenido. Cada nodo incluye referencias a su padre, hijos y hermanos, lo cual facilita operaciones
-            complejas como desplazar subárboles completos o iterar sobre todos los elementos de cierto tipo.
+        <!-- Tarjeta 2 -->
+        <div
+            style="width: 45%; border: 2px solid #ccc; border-radius: 10px; padding: 1rem; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Facilitar la manipulación dinámica del
+                contenido
+            </h2>
+            <img src="Imagenes/2obj.webp" alt="Objetivo 2" style="width: 100%; height: auto; border-radius: 6px;">
+            <p style="text-align: justify; margin-top: 1rem;">Uno de los fines más potentes del DOM es permitir que los
+                desarrolladores modifiquen la página en ejecución,
+                sin necesidad de recargar el navegador. Gracias al DOM, se pueden añadir, editar o eliminar nodos en
+                caliente con métodos como appendChild(), removeChild() o innerHTML.
 
-            Además, este modelo de árbol simplifica enormemente la lógica de búsqueda y recorrido. Funciones como
-            querySelectorAll() o getElementsByTagName() exploran este árbol con algoritmos optimizados que permiten
-            localizar rápidamente los nodos deseados sin necesidad de procesar texto plano.
+                Este objetivo impulsa la creación de interacciones ricas: formularios que validan al teclear, galerías
+                de
+                imágenes que cargan en segundo plano, menús que aparecen al pasar el ratón y vistas que se actualizan
+                con
+                datos en tiempo real. Todo ello sin interrupciones perceptibles para el usuario.
 
-            Por otro lado, entender el documento como un árbol de objetos ayuda a desacoplar la estructura (etiquetas y
-            jerarquía) de la presentación (estilos CSS) y del comportamiento (scripts JavaScript). Cada capa queda bien
-            definida, respetando el principio de separación de responsabilidades.
+                Más aún, la manipulación dinámica posibilita la construcción de Single Page Applications (SPA), donde la
+                aplicación se comporta como un todo coherente y fluido, cambiando secciones de la interfaz sin volver a
+                cargar el HTML completo. El DOM actúa como la base viva sobre la que se monta cada vista.
 
-            Finalmente, gracias a este objetivo, tanto los navegadores como las herramientas de desarrollo (DevTools,
-            validadores, linters) pueden visualizar y depurar el documento de forma clara: colapsar ramas, inspeccionar
-            atributos y monitorizar cambios en tiempo real.</p>
-    </div>
-    <br>
-    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Facilitar la manipulación dinámica del contenido
-    </h2>
-    <div class="Tarjeta">
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="Imagenes/2obj.webp" alt="logo" width="600" height="800">
+                Asimismo, el DOM otorga la capacidad de clonar plantillas de elementos (cloneNode()) y de insertar
+                fragmentos (DocumentFragment), optimizando el rendimiento al reducir los reflows y repaints
+                innecesarios.
+                Estas técnicas avanzadas minimizan el impacto visual y mejoran la experiencia del usuario.
+
+                En definitiva, este objetivo de manipulación dinámica convierte páginas estáticas en entornos
+                interactivos y
+                personalizables, fundamentales para el desarrollo web moderno.</p>
         </div>
-        <br>
-        <p>Uno de los fines más potentes del DOM es permitir que los desarrolladores modifiquen la página en ejecución,
-            sin necesidad de recargar el navegador. Gracias al DOM, se pueden añadir, editar o eliminar nodos en
-            caliente con métodos como appendChild(), removeChild() o innerHTML.
 
-            Este objetivo impulsa la creación de interacciones ricas: formularios que validan al teclear, galerías de
-            imágenes que cargan en segundo plano, menús que aparecen al pasar el ratón y vistas que se actualizan con
-            datos en tiempo real. Todo ello sin interrupciones perceptibles para el usuario.
+        <!-- Tarjeta 3 -->
+        <div
+            style="width: 45%; border: 2px solid #ccc; border-radius: 10px; padding: 1rem; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Establecer una interfaz uniforme y
+                estandarizada
+            </h2>
+            <img src="Imagenes/3obj.webp" alt="Objetivo 3" style="width: 100%; height: auto; border-radius: 6px;">
+            <p style="text-align: justify; margin-top: 1rem;">Otro objetivo clave es ofrecer una API coherente y
+                unificada que todos los navegadores implementen de acuerdo
+                al estándar W3C/WHATWG. Así, funciones como getElementById() o addEventListener() se comportan de igual
+                forma en Chrome, Firefox, Safari, Edge y otros.
 
-            Más aún, la manipulación dinámica posibilita la construcción de Single Page Applications (SPA), donde la
-            aplicación se comporta como un todo coherente y fluido, cambiando secciones de la interfaz sin volver a
-            cargar el HTML completo. El DOM actúa como la base viva sobre la que se monta cada vista.
+                La unificación evita que los desarrolladores tengan que escribir códigos condicionales o usar detección
+                de
+                navegador para lograr compatibilidad. En lugar de ello, basta con seguir la especificación oficial para
+                garantizar que el mismo script funcione en distintos entornos.
 
-            Asimismo, el DOM otorga la capacidad de clonar plantillas de elementos (cloneNode()) y de insertar
-            fragmentos (DocumentFragment), optimizando el rendimiento al reducir los reflows y repaints innecesarios.
-            Estas técnicas avanzadas minimizan el impacto visual y mejoran la experiencia del usuario.
+                Además, esta interfaz estandarizada incluye no solo la manipulación de nodos, sino también el manejo de
+                eventos, el trabajo con estilos, la navegación del historial, el almacenamiento local (localStorage,
+                sessionStorage) y otras APIs hermanas que interactúan con el documento.
 
-            En definitiva, este objetivo de manipulación dinámica convierte páginas estáticas en entornos interactivos y
-            personalizables, fundamentales para el desarrollo web moderno.</p>
-    </div>
-    <br>
-    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Establecer una interfaz uniforme y estandarizada
-    </h2>
-    <div class="Tarjeta">
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="Imagenes/3obj.webp" alt="logo" width="600" height="800">
+                El objetivo es que la curva de aprendizaje sea suave: una vez que conoces la API del DOM en un proyecto,
+                la
+                misma base se aplica a cualquier otro, sin sorpresas ni comportamientos “exóticos” según el navegador.
+
+                Por último, mantener esta interfaz bajo el paraguas de un estándar oficial facilita la evolución
+                controlada
+                del DOM: pueden incorporarse nuevas funcionalidades (p. ej. MutationObserver, Custom Elements) sin
+                romper la
+                compatibilidad con el código existente.</p>
         </div>
-        <br>
-        <p>Otro objetivo clave es ofrecer una API coherente y unificada que todos los navegadores implementen de acuerdo
-            al estándar W3C/WHATWG. Así, funciones como getElementById() o addEventListener() se comportan de igual
-            forma en Chrome, Firefox, Safari, Edge y otros.
 
-            La unificación evita que los desarrolladores tengan que escribir códigos condicionales o usar detección de
-            navegador para lograr compatibilidad. En lugar de ello, basta con seguir la especificación oficial para
-            garantizar que el mismo script funcione en distintos entornos.
+        <!-- Tarjeta 4 -->
+        <div
+            style="width: 45%; border: 2px solid #ccc; border-radius: 10px; padding: 1rem; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Gestionar los eventos del usuario de
+                manera
+                fiable</h2>
+            <img src="Imagenes/4obj.webp" alt="Objetivo 4" style="width: 100%; height: auto; border-radius: 6px;">
+            <p style="text-align: justify; margin-top: 1rem;">El DOM se diseñó para capturar, propagar y gestionar las
+                interacciones del usuario (clics, teclado, scroll,
+                envío de formularios, etc.) a través de un sistema de eventos sólido y flexible. Cada nodo puede
+                suscribirse
+                a uno o varios tipos de eventos para ejecutar lógica personalizada.
 
-            Además, esta interfaz estandarizada incluye no solo la manipulación de nodos, sino también el manejo de
-            eventos, el trabajo con estilos, la navegación del historial, el almacenamiento local (localStorage,
-            sessionStorage) y otras APIs hermanas que interactúan con el documento.
+                Este objetivo incluye ofrecer un modelo de burbujeo y captura que determina el orden en que los eventos
+                recorren el árbol, desde la raíz hasta el elemento objetivo y de vuelta. Con métodos como
+                stopPropagation()
+                o preventDefault(), los desarrolladores controlan el flujo de interacción y anulan comportamientos
+                nativos
+                cuando es necesario.
 
-            El objetivo es que la curva de aprendizaje sea suave: una vez que conoces la API del DOM en un proyecto, la
-            misma base se aplica a cualquier otro, sin sorpresas ni comportamientos “exóticos” según el navegador.
+                El manejo fiable de eventos permite construir componentes accesibles: menús que responden a teclas de
+                dirección, formularios que validan con input, diálogos que se cierran al pulsar escape, o zonas de
+                arrastrar
+                y soltar (drag and drop) con eventos dedicados.
 
-            Por último, mantener esta interfaz bajo el paraguas de un estándar oficial facilita la evolución controlada
-            del DOM: pueden incorporarse nuevas funcionalidades (p. ej. MutationObserver, Custom Elements) sin romper la
-            compatibilidad con el código existente.</p>
-    </div>
-    <br>
-    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Gestionar los eventos del usuario de manera
-        fiable</h2>
-    <div class="Tarjeta">
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="Imagenes/4obj.webp" alt="logo" width="600" height="800">
+                También es objetivo del DOM ofrecer opciones de suscripción avanzadas, como once: true para eventos que
+                sólo
+                deben dispararse una vez, o passive: true para eventos de scroll que optimizan el rendimiento en
+                dispositivos móviles.
+
+                En conjunto, esta gestión de eventos como objetivo dota a la plataforma web de la capacidad de crear
+                interfaces tan intuitivas y reactivas como las de las aplicaciones nativas de escritorio o móviles. </p>
         </div>
-        <br>
-        <p>El DOM se diseñó para capturar, propagar y gestionar las interacciones del usuario (clics, teclado, scroll,
-            envío de formularios, etc.) a través de un sistema de eventos sólido y flexible. Cada nodo puede suscribirse
-            a uno o varios tipos de eventos para ejecutar lógica personalizada.
 
-            Este objetivo incluye ofrecer un modelo de burbujeo y captura que determina el orden en que los eventos
-            recorren el árbol, desde la raíz hasta el elemento objetivo y de vuelta. Con métodos como stopPropagation()
-            o preventDefault(), los desarrolladores controlan el flujo de interacción y anulan comportamientos nativos
-            cuando es necesario.
+        <!-- Tarjeta 5 -->
+        <div
+            style="width: 45%; border: 2px solid #ccc; border-radius: 10px; padding: 1rem; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Mejorar la interoperabilidad y
+                compatibilidad
+                entre plataformas</h2>
+            <img src="Imagenes/5obj.webp" alt="Objetivo 5" style="width: 100%; height: auto; border-radius: 6px;">
+            <p style="text-align: justify; margin-top: 1rem;">Finalmente, el DOM persigue que cualquier documento
+                estructurado (HTML, XML, SVG, MathML) funcione de manera
+                homogénea en distintos dispositivos (PC, móviles, tablets) y sistemas operativos. Para ello define
+                comportamientos claros ante cada operación, minimizando las discrepancias.
 
-            El manejo fiable de eventos permite construir componentes accesibles: menús que responden a teclas de
-            dirección, formularios que validan con input, diálogos que se cierran al pulsar escape, o zonas de arrastrar
-            y soltar (drag and drop) con eventos dedicados.
+                Este objetivo se traduce en un menor coste de desarrollo y mantenimiento: el mismo código que manipula
+                un
+                SVG en escritorio, o que procesa un XML en un servicio, puede ejecutarse en un navegador móvil sin
+                ajustes
+                especiales.
 
-            También es objetivo del DOM ofrecer opciones de suscripción avanzadas, como once: true para eventos que sólo
-            deben dispararse una vez, o passive: true para eventos de scroll que optimizan el rendimiento en
-            dispositivos móviles.
+                Además, gracias a la interoperabilidad, herramientas de testing (como Selenium, Cypress o JSDOM)
+                replican el
+                DOM de manera confiable fuera de los navegadores, permitiendo automatizar pruebas y validar
+                comportamientos
+                antes de desplegar en producción.
 
-            En conjunto, esta gestión de eventos como objetivo dota a la plataforma web de la capacidad de crear
-            interfaces tan intuitivas y reactivas como las de las aplicaciones nativas de escritorio o móviles.</p>
-    </div>
-    <br>
-    <h2 style="text-align: center; font-size: 3rem; font-weight: bold;">Mejorar la interoperabilidad y compatibilidad
-        entre plataformas</h2>
-    <div class="Tarjeta">
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="Imagenes/5obj.webp" alt="logo" width="600" height="800">
+                La compatibilidad también alcanza a tecnologías emergentes: Web Components, Shadow DOM, APIs de realidad
+                aumentada o WebGL usan la base del DOM para integrarse sin conflicto con el contenido tradicional,
+                ampliando
+                las posibilidades sin fragmentar el estándar.
+
+                En suma, al favorecer la interoperabilidad y compatibilidad, el DOM asegura que la web siga siendo
+                universal: accesible, consistente y extensible en todo momento, tanto para usuarios como para
+                desarrolladores.</p>
         </div>
-        <br>
-        <p>Finalmente, el DOM persigue que cualquier documento estructurado (HTML, XML, SVG, MathML) funcione de manera
-            homogénea en distintos dispositivos (PC, móviles, tablets) y sistemas operativos. Para ello define
-            comportamientos claros ante cada operación, minimizando las discrepancias.
 
-            Este objetivo se traduce en un menor coste de desarrollo y mantenimiento: el mismo código que manipula un
-            SVG en escritorio, o que procesa un XML en un servicio, puede ejecutarse en un navegador móvil sin ajustes
-            especiales.
-
-            Además, gracias a la interoperabilidad, herramientas de testing (como Selenium, Cypress o JSDOM) replican el
-            DOM de manera confiable fuera de los navegadores, permitiendo automatizar pruebas y validar comportamientos
-            antes de desplegar en producción.
-
-            La compatibilidad también alcanza a tecnologías emergentes: Web Components, Shadow DOM, APIs de realidad
-            aumentada o WebGL usan la base del DOM para integrarse sin conflicto con el contenido tradicional, ampliando
-            las posibilidades sin fragmentar el estándar.
-
-            En suma, al favorecer la interoperabilidad y compatibilidad, el DOM asegura que la web siga siendo
-            universal: accesible, consistente y extensible en todo momento, tanto para usuarios como para
-            desarrolladores.</p>
     </div>
-    <br>
+
 
     <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
